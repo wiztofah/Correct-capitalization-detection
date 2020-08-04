@@ -1,0 +1,20 @@
+class Solution:
+    def detectCapitalUse(self, word: str) -> bool:
+        lowercase = 0
+        uppercase = 0
+        for letter in word:
+            if (letter.islower()) == True:
+                lowercase +=1
+            else:
+                uppercase +=1
+        if len(word) == lowercase or len(word) == uppercase:
+            return True
+        elif (word[0].isupper()) == True and uppercase == 1:
+            return True
+        else:
+            return False
+    
+         
+      
+        
+    
